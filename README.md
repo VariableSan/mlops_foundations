@@ -18,6 +18,20 @@ Add a dependency with `uv add package-name`. This updates `pyproject.toml`
 and `uv.lock`; use `uv add "uvicorn[standard]"` for dependencies with extras.
 Run project commands with `uv run`, for example `uv run python -m unittest discover -s tests -v`.
 
+## Run the API
+
+After installing dependencies, run the API from the project root:
+
+```bash
+make api-dev   # Development: automatically reload on code changes
+make api-prod  # Production mode: no automatic reload
+```
+
+Both commands listen on `127.0.0.1:8000` by default. Restart the API after
+retraining the model because each process caches the loaded model. The production
+command runs a single local Uvicorn process; a public deployment requires
+additional deployment and security configuration.
+
 ## Project Organization
 
 ```

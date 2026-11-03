@@ -64,6 +64,17 @@ data: requirements
 	uv run --locked python mlops_foundations/dataset.py
 
 
+## Run the API with automatic reload for development
+.PHONY: api-dev
+api-dev:
+	uv run --locked python -m uvicorn mlops_foundations.api:app --reload
+
+## Run the API without automatic reload
+.PHONY: api-prod
+api-prod:
+	uv run --locked python -m uvicorn mlops_foundations.api:app
+
+
 #################################################################################
 # Self Documenting Commands                                                     #
 #################################################################################

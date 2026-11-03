@@ -2,7 +2,7 @@
 # GLOBALS                                                                       #
 #################################################################################
 
-PROJECT_NAME = src
+PROJECT_NAME = mlops_foundations
 PYTHON_VERSION = 3.12
 PYTHON_INTERPRETER = python
 
@@ -14,7 +14,7 @@ PYTHON_INTERPRETER = python
 ## Install Python dependencies
 .PHONY: requirements
 requirements:
-	uv pip install -r requirements.txt
+	uv sync --locked
 	
 
 
@@ -61,7 +61,7 @@ create_environment:
 ## Make dataset
 .PHONY: data
 data: requirements
-	$(PYTHON_INTERPRETER) mlops_foundtations/dataset.py
+	uv run --locked python mlops_foundations/dataset.py
 
 
 #################################################################################

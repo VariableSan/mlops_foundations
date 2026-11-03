@@ -1,10 +1,22 @@
-# mlops_foundtations
+# mlops_foundations
 
 <a target="_blank" href="https://cookiecutter-data-science.drivendata.org/">
     <img src="https://img.shields.io/badge/CCDS-Project%20template-328F97?logo=cookiecutter" />
 </a>
 
 A short description of the project.
+
+## Environment
+
+Install the project's dependencies and its editable package with:
+
+```bash
+uv sync --locked
+```
+
+Add a dependency with `uv add package-name`. This updates `pyproject.toml`
+and `uv.lock`; use `uv add "uvicorn[standard]"` for dependencies with extras.
+Run project commands with `uv run`, for example `uv run python -m unittest discover -s tests -v`.
 
 ## Project Organization
 
@@ -26,22 +38,19 @@ A short description of the project.
 │                         the creator's initials, and a short `-` delimited description, e.g.
 │                         `1.0-jqp-initial-data-exploration`.
 │
-├── pyproject.toml     <- Project configuration file with package metadata for 
-│                         mlops_foundtations and configuration for tools like black
+├── pyproject.toml     <- Project metadata, dependencies, and tool configuration
+├── uv.lock            <- Locked dependency versions for reproducible installs
 │
 ├── references         <- Data dictionaries, manuals, and all other explanatory materials.
 │
 ├── reports            <- Generated analysis as HTML, PDF, LaTeX, etc.
 │   └── figures        <- Generated graphics and figures to be used in reporting
 │
-├── requirements.txt   <- The requirements file for reproducing the analysis environment, e.g.
-│                         generated with `pip freeze > requirements.txt`
-│
 ├── setup.cfg          <- Configuration file for flake8
 │
-└── mlops_foundtations   <- Source code for use in this project.
+└── mlops_foundations   <- Source code for use in this project.
     │
-    ├── __init__.py             <- Makes mlops_foundtations a Python module
+    ├── __init__.py             <- Makes mlops_foundations a Python module
     │
     ├── config.py               <- Store useful variables and configuration
     │
@@ -58,4 +67,3 @@ A short description of the project.
 ```
 
 --------
-

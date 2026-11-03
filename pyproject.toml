@@ -3,7 +3,7 @@ requires = ["flit_core >=3.2,<4"]
 build-backend = "flit_core.buildapi"
 
 [project]
-name = "mlops_foundtations"
+name = "mlops_foundations"
 version = "0.0.1"
 description = "A short description of the project."
 authors = [
@@ -16,17 +16,31 @@ classifiers = [
     "License :: OSI Approved :: MIT License"
 ]
 requires-python = "~=3.12.0"
+dependencies = [
+    "fastapi>=0.162.0",
+    "joblib>=1.6.0",
+    "loguru",
+    "mkdocs",
+    "pandas>=3.1.0",
+    "pip",
+    "python-dotenv",
+    "ruff",
+    "scikit-learn>=1.9.1",
+    "tqdm",
+    "typer",
+    "uvicorn[standard]>=0.54.0",
+]
 
 
 [tool.ruff]
 line-length = 99
-src = ["mlops_foundtations"]
-include = ["pyproject.toml", "mlops_foundtations/**/*.py"]
+src = ["mlops_foundations"]
+include = ["pyproject.toml", "mlops_foundations/**/*.py"]
 
 [tool.ruff.lint]
 extend-select = ["I"]  # Add import sorting
 
 [tool.ruff.lint.isort]
-known-first-party = ["mlops_foundtations"]
+known-first-party = ["mlops_foundations"]
 force-sort-within-sections = true
 

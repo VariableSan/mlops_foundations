@@ -1,4 +1,4 @@
-# mlops_foundtations documentation!
+# mlops_foundations documentation!
 
 ## Description
 

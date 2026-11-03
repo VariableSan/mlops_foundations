@@ -36,7 +36,11 @@ Use `uv add <package>` to add an approved dependency and update the lockfile.
 - Inspect Git status and preserve the learner's uncommitted work.
 - Keep changes small and explain how they support the current lesson.
 - Keep package names, imports, metadata, commands and documentation consistent.
-- Add regression tests before changing behavior; run tests and lint before reporting success.
+- Create or change tests only when the user explicitly invokes the `writing-tdd-tests`
+  skill or explicitly requests tests or TDD. For such requests, load that skill and
+  follow its workflow. Do not invoke it automatically for unrelated changes.
+- Running existing tests and lint does not require the skill; validate changes and
+  report any validation limits.
 - Avoid reading `.env` or credentials. Tests must disable dotenv loading.
 - Use temporary fixtures for tests; do not overwrite datasets, models or logs.
 - Training overwrites `models/model.pkl`; run it only when requested.
